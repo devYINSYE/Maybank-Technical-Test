@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "8bced08f-d517-44a7-b198-5991f0be58c7",
+		"name": "Maybank Technical Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20422101"
+	},
+	"item": [
+		{
+			"name": "Import Data Source",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/batch/run",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"batch",
+						"run"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Import Data Source",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/batch/run",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"batch",
+								"run"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "Batch job started with status: COMPLETED"
+				}
+			]
+		},
+		{
+			"name": "Search Transaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/transactions?customerId=222&accountNumber=8872838283&accountNumber=6872838260&description=3rd Party FUND TRANSFER&size=1&page=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "222"
+						},
+						{
+							"key": "accountNumber",
+							"value": "8872838283"
+						},
+						{
+							"key": "accountNumber",
+							"value": "6872838260"
+						},
+						{
+							"key": "description",
+							"value": "3rd Party FUND TRANSFER"
+						},
+						{
+							"key": "size",
+							"value": "1"
+						},
+						{
+							"key": "page",
+							"value": "10"
+						}
+					]
+				},
+				"description": "```\nAPI to search by customer ID or account number(s) or description\n\n ```"
+			},
+			"response": [
+				{
+					"name": "Search Transaction",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions?customerId=222&accountNumber=8872838283&accountNumber=6872838260&description=3rd Party FUND TRANSFER&size=1&page=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions"
+							],
+							"query": [
+								{
+									"key": "customerId",
+									"value": "222"
+								},
+								{
+									"key": "accountNumber",
+									"value": "8872838283"
+								},
+								{
+									"key": "accountNumber",
+									"value": "6872838260"
+								},
+								{
+									"key": "description",
+									"value": "3rd Party FUND TRANSFER"
+								},
+								{
+									"key": "size",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n    \"content\": [\r\n        {\r\n            \"id\": 4,\r\n            \"accountNumber\": \"8872838283\",\r\n            \"trxAmount\": 1233.00,\r\n            \"description\": \"3rd Party FUND TRANSFER\",\r\n            \"trxDate\": \"2019-11-11\",\r\n            \"trxTime\": \"11:11:11\",\r\n            \"customerId\": \"222\",\r\n            \"version\": 0,\r\n            \"createdAt\": \"2025-08-31T09:20:39.463003Z\",\r\n            \"updatedAt\": \"2025-08-31T09:20:39.463003Z\"\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"accountNumber\": \"8872838283\",\r\n            \"trxAmount\": 1243.00,\r\n            \"description\": \"3rd Party FUND TRANSFER\",\r\n            \"trxDate\": \"2019-08-11\",\r\n            \"trxTime\": \"11:11:11\",\r\n            \"customerId\": \"222\",\r\n            \"version\": 0,\r\n            \"createdAt\": \"2025-08-31T09:20:39.463003Z\",\r\n            \"updatedAt\": \"2025-08-31T09:20:39.463003Z\"\r\n        },\r\n        {\r\n            \"id\": 6,\r\n            \"accountNumber\": \"8872838283\",\r\n            \"trxAmount\": 12553.00,\r\n            \"description\": \"3rd Party FUND TRANSFER\",\r\n            \"trxDate\": \"2019-07-11\",\r\n            \"trxTime\": \"11:11:11\",\r\n            \"customerId\": \"222\",\r\n            \"version\": 0,\r\n            \"createdAt\": \"2025-08-31T09:20:39.463003Z\",\r\n            \"updatedAt\": \"2025-08-31T09:20:39.463003Z\"\r\n        }\r\n    ],\r\n    \"pageable\": {\r\n        \"pageNumber\": 0,\r\n        \"pageSize\": 10,\r\n        \"sort\": {\r\n            \"empty\": false,\r\n            \"sorted\": true,\r\n            \"unsorted\": false\r\n        },\r\n        \"offset\": 0,\r\n        \"paged\": true,\r\n        \"unpaged\": false\r\n    },\r\n    \"last\": true,\r\n    \"totalElements\": 3,\r\n    \"totalPages\": 1,\r\n    \"size\": 10,\r\n    \"number\": 0,\r\n    \"first\": true,\r\n    \"numberOfElements\": 3,\r\n    \"sort\": {\r\n        \"empty\": false,\r\n        \"sorted\": true,\r\n        \"unsorted\": false\r\n    },\r\n    \"empty\": false\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Transaction Description",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"FUND TRANSFER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/transactions/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"transactions",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Transaction Description",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"FUND TRANSFER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/api/v1/transactions/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"1"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": "{\r\n    \"id\": 1,\r\n    \"accountNumber\": \"8872838283\",\r\n    \"trxAmount\": 123.00,\r\n    \"description\": \"FUND TRANSFER\",\r\n    \"trxDate\": \"2019-09-12\",\r\n    \"trxTime\": \"11:11:11\",\r\n    \"customerId\": \"222\",\r\n    \"version\": 2,\r\n    \"createdAt\": \"2025-08-31T09:20:39.433033Z\",\r\n    \"updatedAt\": \"2025-08-31T09:30:23.227662800Z\"\r\n}"
+				}
+			]
+		}
+	]
+}
